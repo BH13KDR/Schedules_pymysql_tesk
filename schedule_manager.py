@@ -57,7 +57,15 @@ def get_schedules(cursor: Cursor):
 
 def complete_schedule(cursor: Cursor):
     # Todo: 여기에 일정을 완료처리하는 코드를 작성합니다.
-    raise NotImplementedError("함수 미구현")
+    # 완료 시킬 일정의 id값을 입력 받는다.
+    id = input("아이디 값")
+
+    # Update 쿼리 작성
+    sql = "UPDATE schedules SET is_completed = 1 WHERE id = %s"
+
+    # Update 쿼리 실행
+    cursor.execute(sql, id)
+    print("일정을 완료함.")
 
 # 메뉴 나타내기
 def show_menu() -> str:
