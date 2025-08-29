@@ -12,7 +12,6 @@ def get_db_connection() -> pymysql.Connection:
         exit(1)
 
 def add_schedule(cursor: Cursor):
-    # Todo: 여기에 일정 추가 코드를 작성합니다.
     # 일정 정보를 받는다.
     title = input("제목 : ")
     desc = input("설명 : ")
@@ -30,7 +29,6 @@ def add_schedule(cursor: Cursor):
     print("일정이 추가됨")
 
 def get_schedules(cursor: Cursor):
-    # Todo: 여기에 일정 정보를 가져오는 코드를 작성합니다.
 
     #select쿼리 작성
     sql = "SELECT id, title, description, start_datetime, end_datetime FROM schedules"
@@ -56,7 +54,6 @@ def get_schedules(cursor: Cursor):
         print()
 
 def complete_schedule(cursor: Cursor):
-    # Todo: 여기에 일정을 완료처리하는 코드를 작성합니다.
     # 완료 시킬 일정의 id값을 입력 받는다.
     id = input("아이디 값")
 
