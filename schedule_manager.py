@@ -16,8 +16,8 @@ def add_schedule(cursor: Cursor):
     # 일정 정보를 받는다.
     title = input("제목 : ")
     desc = input("설명 : ")
-    start_datetime = input("시작 시간(yyyymmddhhmm)")
-    end_datetime = input("종료 시간(yyyymmddhhmm)")
+    start_datetime = input("시작 시간(yyyymmddhhmmss)")
+    end_datetime = input("종료 시간(yyyymmddhhmmss)")
 
     # Insert 쿼리 작성
     sql = """
