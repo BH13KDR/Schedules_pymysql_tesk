@@ -16,8 +16,8 @@ def add_schedule(cursor: Cursor):
     # 일정 정보를 받는다.
     title = input("제목 : ")
     desc = input("설명 : ")
-    start_datetime = input("시작 시간(yyyymmddhhmmss)")
-    end_datetime = input("시작 시간(yyyymmddhhmmss)")
+    start_datetime = input("시작 시간(yyyymmddhhmm)")
+    end_datetime = input("종료 시간(yyyymmddhhmm)")
 
     # Insert 쿼리 작성
     sql = """
@@ -28,8 +28,6 @@ def add_schedule(cursor: Cursor):
     # Insert 쿼리 실행
     cursor.execute(sql, (title, desc, start_datetime, end_datetime))
     print("일정이 추가됨")
-
-    raise NotImplementedError("함수 미구현")
 
 def get_schedules(cursor: Cursor):
     # Todo: 여기에 일정 정보를 가져오는 코드를 작성합니다.
@@ -56,8 +54,6 @@ def get_schedules(cursor: Cursor):
         if description:
             print(f"    설명: {description}")
         print()
-
-    raise NotImplementedError("함수 미구현")
 
 def complete_schedule(cursor: Cursor):
     # Todo: 여기에 일정을 완료처리하는 코드를 작성합니다.
